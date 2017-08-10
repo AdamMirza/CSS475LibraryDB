@@ -5,7 +5,7 @@ CREATE TABLE CHECKOUT
 	Checkout_date	DATE 		NOT NULL,
 	Due_date		DATE 		NOT NULL,
 	Renewals_left	INT(2)		NOT NULL,
-	Is_returned		BOOLEAN	NOT NULL,   -- 0 for false, 1 for true
+	Is_returned		BOOLEAN		NOT NULL,   -- 0 for false, 1 for true
 
 	CONSTRAINT FK_1 FOREIGN KEY(Account_ID) REFERENCES ACCOUNT(Account_ID),
 
