@@ -12,7 +12,7 @@ CREATE TABLE MEDIA
     CONSTRAINT FK_1 FOREIGN KEY(Media_type) REFERENCES Rate(Media_type),
 
 	CONSTRAINT CHECK_PYEAR
-		CHECK(Publishing_year >= 1500 AND Publishing_year <= strftime('%Y','now'))
+		CHECK(Publishing_year >= 1500 AND Publishing_year <= strftime('%Y','now')),
 
 	CONSTRAINT CHECK_INVENTORY
 		CHECK(Inventory >= 0)
