@@ -18,6 +18,11 @@ CREATE TABLE ACCOUNT
 	'MP', 'PW', 'PR', 'VI', 'AE', 'AA', 'AE', 'AP')),
 
 	CONSTRAINT PASSWORD_LENGTH
-		CHECK (length(Password) >= 8)
+		CHECK (length(Password) >= 8),
 
+	CONSTRAINT ACCOUNT_LENGTH
+	CHECK (length(Account_ID) == 9),
+
+	CONSTRAINT ZIP_LENGTH
+	CHECK (length(Zip) == 5)
 );
