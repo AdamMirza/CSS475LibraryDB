@@ -9,6 +9,7 @@ CREATE TABLE MEDIA
 	Inventory			INT				NOT NULL,
 
     PRIMARY KEY (Media_ID),
+    CONSTRAINT FK_1 FOREIGN KEY(Media_type) REFERENCES Rate(Media_type),
 
 	CONSTRAINT CHECK_PYEAR
 		CHECK(Publishing_year >= 1500 AND Publishing_year <= strftime('%Y','now'))
