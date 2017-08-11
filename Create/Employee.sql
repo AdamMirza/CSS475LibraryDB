@@ -1,18 +1,18 @@
 CREATE TABLE EMPLOYEE
 (
-	ID          INT(10)        NOT NULL,
+	ID          INT        NOT NULL,
 	Name        VARCHAR(50)    NOT NULL,
 	Dob         Date           NOT NULL,
 	Sex         VARCHAR(1)     NOT NULL,
 	Street      VARCHAR(50)    NOT NULL,
 	City        VARCHAR(50)    NOT NULL,
 	State       VARCHAR(3)     NOT NULL,
-	Zip         INT(5)         NOT NULL,
-	SSN         INT(9)         NOT NULL,
-	Phone_num  	VARCHAR(10)    NOT NULL,
+	Zip         INT         NOT NULL,
+	SSN         INT        NOT NULL,
+	Phone_num   VARCHAR(10)    NOT NULL,
 	Pay_rate    DECIMAL(4,2)   NOT NULL,
 	Position    VARCHAR(50)    NOT NULL,
-	Dep_ID      INT(4)         NOT NULL,
+	Dep_ID      INT        NOT NULL,
         	
 	PRIMARY KEY (ID),
 	
@@ -20,9 +20,6 @@ CREATE TABLE EMPLOYEE
 	
 	CONSTRAINT CHECK_SEX
 		CHECK(Sex = 'F' OR Sex = 'M' OR Sex = 'U'),    -- U for employees not wishing to disclose their gender
-
-	CONSTRAINT CHECK_DEP_ID
-	CHECK(Dep_ID >= 0001 AND Dep_ID <= 9999),
 
 	CONSTRAINT CHECK_STATE
 	CHECK (State in ('AL','AK', 'AZ', 'AR', 'CA', 'CO', 'CT',
@@ -33,6 +30,15 @@ CREATE TABLE EMPLOYEE
 	'MP', 'PW', 'PR', 'VI', 'AE', 'AA', 'AE', 'AP')),
 
 		
-CONSTRAINT VALID_AGE
-CHECK(Dob < date('now', '-16 year'))
+	CONSTRAINT VALID_AGE
+	CHECK(Dob < date('now', '-16 year')),
+	
+	CONSTRAINT ID_LENGTH
+	CHECK(length(ID) == 10),
+	
+	CONSTRAINT ZIP_LENGTH
+	CHECK(length(Zip) == 5),
+	
+	CONSTRAINT SSN_LENGTH
+	CHECK(length(SSN) == 9)	
 ) ;
