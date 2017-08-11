@@ -1,6 +1,6 @@
 CREATE TABLE DEPARTMENT
 (
-	Dept_ID			INT(4)			NOT NULL,
+	Dept_ID			INT			NOT NULL,
 	Dep_name		VARCHAR(50)		NOT NULL,
 
 	PRIMARY KEY (Dept_ID)
