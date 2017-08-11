@@ -1,7 +1,7 @@
 CREATE TABLE SUPERVISOR
 (
-	Department_ID	INT(4)		NOT NULL,
-	Supervisor_ID	INT(10)		NOT NULL,
+	Department_ID	INT		NOT NULL,
+	Supervisor_ID	INT		NOT NULL,
 	
 	FOREIGN KEY(Department_ID)
 		REFERENCES DEPARTMENT(Dept_ID),
