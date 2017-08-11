@@ -7,7 +7,6 @@ Our team consists of:
 * Himakar Kadirimangalam
 * Hien Nguyen
 * Lisa Kim
-* 
 
 ## Introduction
 Our database project is to create a database that would be used for a public library. We are structuring this database to handle all types of media that a physical library would store. The goal of this project is to create a fully working back-end architecture that is extensible for library requests. 
