@@ -19,5 +19,5 @@ CREATE TABLE CHECKOUT
 		CHECK((Checkout_date <= Due_date) AND (Due_date >= Date())),
 
 	CONSTRAINT CHECK_RENEWALS
-		CHECK(Renewals_left > 0)
+		CHECK(Renewals_left > 0 AND Renewals_left < 99)
 );
