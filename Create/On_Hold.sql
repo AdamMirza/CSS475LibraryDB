@@ -1,0 +1,13 @@
+CREATE TABLE ON_HOLD
+(
+	Account_ID	INT(9)			NOT NULL,
+	Media_ID	INT(10)			NOT NULL,
+	Is_on_hold	BOOLEAN			NOT NULL,
+	Date		DATE			NOT NULL,
+
+	FOREIGN KEY(Account_ID)
+		REFERENCES ACCOUNT(Account_ID),
+
+	FOREIGN KEY(Media_ID)
+		REFERENCES MEDIA(Media_ID)
+);
