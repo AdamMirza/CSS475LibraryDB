@@ -1,11 +1,11 @@
 CREATE TABLE CHECKOUT
 (
-	Account_ID 		INT		NOT NULL,
-	Media_ID 		INT		NOT NULL,
-	Checkout_date		DATE 		NOT NULL,
+	Account_ID		INT			NOT NULL,
+	Media_ID		INT			NOT NULL,
+	Checkout_date	DATE 		NOT NULL,
 	Due_date		DATE 		NOT NULL,
-	Renewals_left		INT		NOT NULL,
-	Is_returned		BOOLEAN		NOT NULL,   -- 0 for false, 1 for true
+	Renewals_left	INT			NOT NULL,
+	Is_returned		BOOLEAN		NOT NULL,	-- 0 for false, 1 for true
 
 	CONSTRAINT FK_1 FOREIGN KEY(Account_ID) REFERENCES ACCOUNT(Account_ID)
 		ON UPDATE CASCADE

@@ -21,8 +21,8 @@ CREATE TABLE ACCOUNT
 		CHECK (length(Password) >= 8),
 
 	CONSTRAINT ACCOUNT_LENGTH
-	CHECK (length(Account_ID) == 9),
+		CHECK (length(Account_ID) == 9),
 
 	CONSTRAINT ZIP_LENGTH
-	CHECK (length(Zip) == 5)
+		CHECK (length(Zip) == 5)
 );
